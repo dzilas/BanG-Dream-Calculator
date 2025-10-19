@@ -1,1 +1,1 @@
-# dzilas.github.io
+# Calculator for VSL or TL maximum cans exchange
