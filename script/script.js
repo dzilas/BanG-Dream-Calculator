@@ -28,13 +28,13 @@
       const xField = document.getElementById('x');
       let x = parseFloat(xField.value);
       if (isNaN(x)) {
-        showError("Please enter a valid number for x before adjusting.");
+        showError("Please enter a valid number of cans before adjusting.");
         return;
       }
       x += amount;
       const { maxX } = getMaxValues();
       if (x > maxX) {
-        showError(`Maximum x value is ${maxX} for this option.`);
+        showError(`Maximum number of cans is ${maxX} for this event.`);
         x = maxX;
       }
       if (x < 0) x = 0; // prevent negative
@@ -46,13 +46,13 @@
       const yField = document.getElementById('y');
       let y = parseFloat(yField.value);
       if (isNaN(y)) {
-        showError("Please enter a valid number for y before adjusting.");
+        showError("Please enter a valid number for giftbox remaining before adjusting.");
         return;
       }
       y += amount;
       const { maxY } = getMaxValues();
       if (y > maxY) {
-        showError(`Maximum y value is ${maxY} for this option.`);
+        showError(`Maximum number of giftbox is ${maxY} for this event.`);
         y = maxY;
       }
       if (y < 0) y = 0; // prevent negative
@@ -68,16 +68,16 @@
       const { maxX, maxY } = getMaxValues();
 
       if (isNaN(x) || isNaN(y)) {
-        showError("Please enter valid numbers for both x and y.");
+        showError("Please enter valid numbers for both cans and giftbox.");
         return;
       }
 
       if (x > maxX) {
-        showError(`Maximum x value is ${maxX} for this option.`);
+        showError(`Maximum number of cans is ${maxX} for this event.`);
         return;
       }
       if (y > maxY) {
-        showError(`Maximum y value is ${maxY} for this option.`);
+        showError(`Maximum number of giftbox is ${maxY} for this event.`);
         return;
       }
 
