@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BanG Dream Cans Calculator</title>
+  <link rel="stylesheet" href="style/stylesheet.css">
+  <script src="script/script.js"></script>
+</head>
+<body>
+  <h2>BanG Dream Cans Calculator</h2>
+  
+  <div>
+    <label>Event type: </label>
+    <select id="option" onchange="setToMaxValues()">
+      <option value="18">VS Live</option>
+      <option value="23">Team Live</option>
+    </select>
+  </div>
+
+  <div>
+    <label>Number of Cans=</label>
+    <input type="number" id="x">
+    <button onclick="changeX(1)">+1</button>
+    <button onclick="changeX(-1)">-1</button>
+  </div>
+  
+  <div>
+    <label>Giftbox left=</label>
+    <input type="number" id="y">
+    <button onclick="changeY(1)">+1</button>
+    <button onclick="changeY(-1)">-1</button>
+    <button onclick="changeY(10)">+10</button>
+    <button onclick="changeY(-10)">-10</button>
+  </div>
+
+  <div>
+    <button onclick="calculate()">Check</button>
+    <button onclick="resetValues()">Reset</button>
+  </div>
+
+  <div id="error" class="error"></div>
+  <div id="result" class="result"></div>
+
+</body>
+</html>
